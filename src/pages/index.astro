@@ -1,0 +1,215 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+
+const title = "Path of Exile 2: Complete Guide & Overview";
+const description = "Comprehensive guide to POE 2, including new features, gameplay mechanics, and early access details. Master the next evolution of action RPGs.";
+---
+
+<MainLayout {title} {description}>
+  <Header />
+  
+  <!-- Hero Section with Video Background -->
+  <section class="relative pt-24 pb-12 min-h-screen flex items-center">
+    <video 
+      class="absolute top-0 left-0 w-full h-full object-cover opacity-50" 
+      autoplay 
+      muted 
+      loop 
+      poster="/images/poe2-hero-poster.jpg"
+    >
+      <source src="/videos/poe2-trailer.mp4" type="video/mp4">
+    </video>
+    <div class="container mx-auto text-center relative z-10">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 text-yellow-500 shadow-text">
+        Path of Exile 2
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Experience the next evolution of POE 2 with our comprehensive guide to all new features, mechanics, and content.
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a 
+          href="#whats-new" 
+          class="bg-yellow-500 text-gray-900 px-8 py-3 rounded-full text-lg font-bold hover:bg-yellow-400 transition-colors"
+        >
+          Explore POE 2
+        </a>
+        <a 
+          href="https://www.pathofexile.com/purchase" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="bg-gray-800 text-yellow-500 border-2 border-yellow-500 px-8 py-3 rounded-full text-lg font-bold hover:bg-yellow-500 hover:text-gray-900 transition-colors"
+        >
+          Buy Early Access
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News Section -->
+  <section class="py-16 px-4 bg-gradient-to-b from-gray-900 to-gray-800">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Latest Updates</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {/* News Card 1 */}
+        <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:transform hover:scale-105 transition-transform">
+          <img 
+            src="/images/news/poe2-update-1.jpg" 
+            alt="POE 2 Latest Patch" 
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">Latest Patch Notes</h3>
+            <p class="text-gray-300 mb-4">Explore the newest changes and improvements in POE 2's latest update.</p>
+            <a 
+              href="/news/latest-patch" 
+              class="text-yellow-500 hover:text-yellow-400"
+            >
+              Read More →
+            </a>
+          </div>
+        </div>
+        
+        {/* Additional news cards... */}
+      </div>
+    </div>
+  </section>
+
+  <!-- Class Showcase Section -->
+  <section class="py-16 px-4 bg-gray-800">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Featured Classes</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Class Card - Mercenary */}
+        <div class="relative group">
+          <img 
+            src="/images/classes/mercenary.jpg" 
+            alt="POE 2 Mercenary Class" 
+            class="w-full h-80 object-cover rounded-lg"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-0 p-6">
+              <h3 class="text-2xl font-bold mb-2">Mercenary</h3>
+              <p class="text-gray-300">Master of weapons and adaptable combat techniques.</p>
+              <a 
+                href="/classes/mercenary" 
+                class="inline-block mt-4 text-yellow-500 hover:text-yellow-400"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+        </div>
+        {/* Additional class cards... */}
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameplay Features Section with Video -->
+  <section class="py-16 px-4 bg-gray-900">
+    <div class="container mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Gameplay Overview</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <h3 class="text-2xl font-bold text-yellow-500">Revolutionary Combat System</h3>
+          <p class="text-gray-300">Experience fluid combat mechanics, strategic positioning, and devastating abilities in POE 2's enhanced combat system.</p>
+          <ul class="list-disc list-inside text-gray-300 space-y-2">
+            <li>Dynamic dodge roll mechanics</li>
+            <li>Improved hit detection</li>
+            <li>Seamless ability chaining</li>
+            <li>Strategic positioning matters</li>
+          </ul>
+        </div>
+        <div class="relative aspect-video rounded-lg overflow-hidden">
+          <iframe 
+            class="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/LCOqAcN1820" 
+            title="Path of Exile 2 Official Trailer"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action with Background Image -->
+  <section class="relative py-24 px-4">
+    <div class="absolute inset-0">
+      <img 
+        src="/images/cta-background.jpg" 
+        alt="" 
+        class="w-full h-full object-cover opacity-30"
+      />
+    </div>
+    <div class="container mx-auto text-center relative z-10">
+      <h2 class="text-3xl md:text-5xl font-bold mb-6">Ready to Begin Your POE 2 Journey?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Join millions of players in the next evolution of action RPGs. Get early access now and shape the future of POE 2.</p>
+      <div class="flex gap-4 justify-center">
+        <a 
+          href="/beginners-guide" 
+          class="bg-yellow-500 text-gray-900 px-8 py-3 rounded-full text-lg font-bold hover:bg-yellow-400 transition-colors"
+        >
+          Get Started Guide
+        </a>
+        <a 
+          href="https://discord.gg/poe2" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="bg-gray-800 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-gray-700 transition-colors"
+        >
+          Join Community
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Social Links -->
+  <footer class="bg-gray-900 py-12 px-4 border-t border-gray-800">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">POE 2 Guide</h3>
+          <p class="text-gray-400">Your comprehensive resource for all things Path of Exile 2.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="/classes" class="text-gray-400 hover:text-yellow-500">Classes</a></li>
+            <li><a href="/gameplay" class="text-gray-400 hover:text-yellow-500">Gameplay</a></li>
+            <li><a href="/endgame" class="text-gray-400 hover:text-yellow-500">Endgame</a></li>
+            <li><a href="/beginners-guide" class="text-gray-400 hover:text-yellow-500">Beginner's Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Community</h4>
+          <ul class="space-y-2">
+            <li><a href="https://discord.gg/poe2" class="text-gray-400 hover:text-yellow-500">Discord</a></li>
+            <li><a href="https://reddit.com/r/pathofexile2" class="text-gray-400 hover:text-yellow-500">Reddit</a></li>
+            <li><a href="https://twitter.com/pathofexile" class="text-gray-400 hover:text-yellow-500">Twitter</a></li>
+            <li><a href="https://youtube.com/pathofexile" class="text-gray-400 hover:text-yellow-500">YouTube</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/privacy" class="text-gray-400 hover:text-yellow-500">Privacy Policy</a></li>
+            <li><a href="/terms" class="text-gray-400 hover:text-yellow-500">Terms of Service</a></li>
+            <li><a href="/cookies" class="text-gray-400 hover:text-yellow-500">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
+        <p>&copy; 2024 POE 2 Guide. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</MainLayout>
+
+<style>
+  .shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+</style>
